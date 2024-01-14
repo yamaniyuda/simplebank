@@ -2,11 +2,11 @@ package db
 
 import (
 	"context"
-	"simplebank/utils"
 	"testing"
 	"time"
 
 	"github.com/stretchr/testify/require"
+	"github.com/yamaniyuda/simplebank/utils"
 )
 
 func createRandomEntry(t *testing.T, account Account) Entry {

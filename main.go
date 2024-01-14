@@ -3,11 +3,11 @@ package main
 import (
 	"database/sql"
 	"log"
-	"simplebank/api"
-	db "simplebank/db/sqlc"
-	"simplebank/utils"
 
 	_ "github.com/lib/pq"
+	"github.com/yamaniyuda/simplebank/api"
+	db "github.com/yamaniyuda/simplebank/db/sqlc"
+	"github.com/yamaniyuda/simplebank/utils"
 )
 
 func main() {
@@ -21,7 +21,7 @@ func main() {
 	}
 
 	store := db.NewStore(conn)
-	server := api.NewServer(store)
+	server := api.NewServer(&store)
 
 	err = server.Start(config.ServerAddress)
 

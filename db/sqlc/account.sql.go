@@ -121,6 +121,7 @@ type ListAccountsParams struct {
 	Offset int32 `json:"offset"`
 }
 
+
 func (q *Queries) ListAccounts(ctx context.Context, arg ListAccountsParams) ([]Account, error) {
 	rows, err := q.db.QueryContext(ctx, listAccounts, arg.Limit, arg.Offset)
 	if err != nil {

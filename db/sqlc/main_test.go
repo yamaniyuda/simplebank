@@ -4,10 +4,10 @@ import (
 	"database/sql"
 	"log"
 	"os"
-	"simplebank/utils"
 	"testing"
 
 	_ "github.com/lib/pq"
+	"github.com/yamaniyuda/simplebank/utils"
 )
 
 var testQueries *Queries
