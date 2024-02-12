@@ -28,6 +28,7 @@ jobs:
         id: login-ecr
         uses: aws-actions/configure-aws-credentials@v4
 
+
       - name: Build, tag, and push docker image to Amazon ECR
         env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
